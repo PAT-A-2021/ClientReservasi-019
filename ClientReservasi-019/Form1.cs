@@ -95,7 +95,7 @@ namespace ClientReservasi_019
             Clear();
         }
 
-        private void dtPemesanan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtPemesanan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxID.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[0].Value);
             textBoxNama.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[3].Value);

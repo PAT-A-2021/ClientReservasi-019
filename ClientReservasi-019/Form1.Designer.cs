@@ -44,18 +44,13 @@ namespace ClientReservasi_019
             this.btUpdate = new System.Windows.Forms.Button();
             this.btHapus = new System.Windows.Forms.Button();
             this.btClear = new System.Windows.Forms.Button();
-            this.dtPemesanan = new System.Windows.Forms.DataGridView();
-            this.wCFReservasiDataSet = new ClientReservasi_019.WCFReservasiDataSet();
             this.pemesananBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wCFReservasiDataSet = new ClientReservasi_019.WCFReservasiDataSet();
             this.pemesananTableAdapter = new ClientReservasi_019.WCFReservasiDataSetTableAdapters.PemesananTableAdapter();
-            this.iDreservasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namacustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notelponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlahpemesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDlokasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasiDataSet)).BeginInit();
+            this.dtPemesanan = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -178,78 +173,30 @@ namespace ClientReservasi_019
             this.btClear.UseVisualStyleBackColor = true;
             this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
-            // dtPemesanan
+            // pemesananBindingSource
             // 
-            this.dtPemesanan.AutoGenerateColumns = false;
-            this.dtPemesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtPemesanan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDreservasiDataGridViewTextBoxColumn,
-            this.namacustomerDataGridViewTextBoxColumn,
-            this.notelponDataGridViewTextBoxColumn,
-            this.jumlahpemesananDataGridViewTextBoxColumn,
-            this.iDlokasiDataGridViewTextBoxColumn});
-            this.dtPemesanan.DataSource = this.pemesananBindingSource;
-            this.dtPemesanan.Location = new System.Drawing.Point(12, 304);
-            this.dtPemesanan.Name = "dtPemesanan";
-            this.dtPemesanan.RowHeadersWidth = 51;
-            this.dtPemesanan.RowTemplate.Height = 24;
-            this.dtPemesanan.Size = new System.Drawing.Size(681, 226);
-            this.dtPemesanan.TabIndex = 14;
-            this.dtPemesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPemesanan_CellContentClick);
+            this.pemesananBindingSource.DataMember = "Pemesanan";
+            this.pemesananBindingSource.DataSource = this.wCFReservasiDataSet;
             // 
             // wCFReservasiDataSet
             // 
             this.wCFReservasiDataSet.DataSetName = "WCFReservasiDataSet";
             this.wCFReservasiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pemesananBindingSource
-            // 
-            this.pemesananBindingSource.DataMember = "Pemesanan";
-            this.pemesananBindingSource.DataSource = this.wCFReservasiDataSet;
-            // 
             // pemesananTableAdapter
             // 
             this.pemesananTableAdapter.ClearBeforeFill = true;
             // 
-            // iDreservasiDataGridViewTextBoxColumn
+            // dtPemesanan
             // 
-            this.iDreservasiDataGridViewTextBoxColumn.DataPropertyName = "ID_reservasi";
-            this.iDreservasiDataGridViewTextBoxColumn.HeaderText = "ID_reservasi";
-            this.iDreservasiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDreservasiDataGridViewTextBoxColumn.Name = "iDreservasiDataGridViewTextBoxColumn";
-            this.iDreservasiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namacustomerDataGridViewTextBoxColumn
-            // 
-            this.namacustomerDataGridViewTextBoxColumn.DataPropertyName = "Nama_customer";
-            this.namacustomerDataGridViewTextBoxColumn.HeaderText = "Nama_customer";
-            this.namacustomerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namacustomerDataGridViewTextBoxColumn.Name = "namacustomerDataGridViewTextBoxColumn";
-            this.namacustomerDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // notelponDataGridViewTextBoxColumn
-            // 
-            this.notelponDataGridViewTextBoxColumn.DataPropertyName = "No_telpon";
-            this.notelponDataGridViewTextBoxColumn.HeaderText = "No_telpon";
-            this.notelponDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.notelponDataGridViewTextBoxColumn.Name = "notelponDataGridViewTextBoxColumn";
-            this.notelponDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jumlahpemesananDataGridViewTextBoxColumn
-            // 
-            this.jumlahpemesananDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_pemesanan";
-            this.jumlahpemesananDataGridViewTextBoxColumn.HeaderText = "Jumlah_pemesanan";
-            this.jumlahpemesananDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jumlahpemesananDataGridViewTextBoxColumn.Name = "jumlahpemesananDataGridViewTextBoxColumn";
-            this.jumlahpemesananDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iDlokasiDataGridViewTextBoxColumn
-            // 
-            this.iDlokasiDataGridViewTextBoxColumn.DataPropertyName = "ID_lokasi";
-            this.iDlokasiDataGridViewTextBoxColumn.HeaderText = "ID_lokasi";
-            this.iDlokasiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDlokasiDataGridViewTextBoxColumn.Name = "iDlokasiDataGridViewTextBoxColumn";
-            this.iDlokasiDataGridViewTextBoxColumn.Width = 125;
+            this.dtPemesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtPemesanan.Location = new System.Drawing.Point(16, 311);
+            this.dtPemesanan.Name = "dtPemesanan";
+            this.dtPemesanan.RowHeadersWidth = 51;
+            this.dtPemesanan.RowTemplate.Height = 24;
+            this.dtPemesanan.Size = new System.Drawing.Size(608, 238);
+            this.dtPemesanan.TabIndex = 14;
+            this.dtPemesanan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPemesanan_CellClick);
             // 
             // Form1
             // 
@@ -274,9 +221,9 @@ namespace ClientReservasi_019
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,15 +245,10 @@ namespace ClientReservasi_019
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btHapus;
         private System.Windows.Forms.Button btClear;
-        private System.Windows.Forms.DataGridView dtPemesanan;
         private WCFReservasiDataSet wCFReservasiDataSet;
         private System.Windows.Forms.BindingSource pemesananBindingSource;
         private WCFReservasiDataSetTableAdapters.PemesananTableAdapter pemesananTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDreservasiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namacustomerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notelponDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jumlahpemesananDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDlokasiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dtPemesanan;
     }
 }
 
